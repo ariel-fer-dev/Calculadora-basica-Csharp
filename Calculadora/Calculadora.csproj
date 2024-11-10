@@ -158,9 +158,9 @@
   <ItemGroup>
     <Content Include="Draseart-Dumper-Calculator.ico" />
     <Content Include="icono2.ico" />
-    <None Include="readme.md">
+    <Content Include="readme.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Resources\icons8-plus-minus-+---16.png" />
     <None Include="Resources\Number-0-icon.png" />
     <None Include="Resources\Number-9-icon.png" />

@@ -118,9 +118,7 @@ namespace Calculadora {
             }
             if (lbPantalla.Text.Length < 20) {
                 tieneComa = lbPantalla.Text.IndexOf(',');
-                //Console.WriteLine(tieneComa);
-                //Console.WriteLine("lbPantalla = " + lbPantalla.Text);
-                //Console.WriteLine(Convert.ToDouble((lbPantalla.Text.Replace(".", "")) + "1").ToString("#,###.##########"));
+            
 
                 lbPantalla.Text = ((tieneComa != -1) ? lbPantalla.Text + "1"
                         : (Convert.ToDouble(lbPantalla.Text.Replace(".", "") + "1").ToString("#,###.##########")));
@@ -141,7 +139,6 @@ namespace Calculadora {
             n1 = 0;
             n2 = 0;
             this.txtFieldPantalla.Focus();
-            //this.txtFieldPantalla.DeselectAll();
         }
 
         private void b2_Click(object sender, EventArgs e) {
@@ -285,8 +282,6 @@ namespace Calculadora {
                 }
                 tieneComa = lbPantalla.Text.IndexOf(',');
 
-                //    Console.WriteLine("Cero = " + Convert.ToDouble("0").ToString("#,###.##########") + "0");
-
                 lbPantalla.Text = ((tieneComa != -1) ? lbPantalla.Text + "0"
                         : (Convert.ToDouble(lbPantalla.Text.Replace(".", "") + "0").ToString("#,###.##########")));
             } else {
@@ -302,8 +297,6 @@ namespace Calculadora {
             }
 
             tieneComa = lbPantalla.Text.IndexOf(',');
-
-            //Console.WriteLine("TieneComa = " + tieneComa);
 
             if (!lbPantalla.Text.Contains(',')) {
                 lbPantalla.Text = ("".Equals(lbPantalla.Text)) ?
@@ -369,7 +362,6 @@ namespace Calculadora {
                     //         Convert.ToDouble(lbPantalla.Text.Replace(".", "")).ToString("#,0.##########")
                     n1 = n1 + Convert.ToDouble(lbPantalla.Text.Replace(".", ""));
 
-                    //Console.WriteLine("Operacion suma");
 
                 } else {
                     switch (operacion) {
@@ -400,7 +392,6 @@ namespace Calculadora {
             lbPantalla.Text = "";
 
             this.txtFieldPantalla.Focus();
-            //  this.txtFieldPantalla.DeselectAll();
             panel.Select(panel.Text.Length, 0);
         }
 
